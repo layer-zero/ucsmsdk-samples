@@ -35,7 +35,6 @@ def write_vlans_to_csv(csv_filename, vlan_mos):
                 print 'Adding fabric {} VLAN "{}" with id {} to file'.format(vlan_mo.switch_id, vlan_mo.name, vlan_mo.id)               
             vlan_csv.writerow([vlan_mo.id, vlan_mo.name, vlan_mo.switch_id])
 
-
 def main():
     ucs_params = get_parameters()
     handle = ucshandle.UcsHandle(ucs_params['ip'], ucs_params['user'], ucs_params['password'], secure=True)
