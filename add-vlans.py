@@ -9,7 +9,7 @@ from ucsmsdk.mometa.fabric.FabricVlan import FabricVlan
 
 default_ip = '192.168.218.182'
 default_user = 'admin'
-default_filename = 'sample-vlans.csv'
+default_filename = 'sample-vlans-in.csv'
 
 def get_parameters():
     ucsm_ip = raw_input('Target UCS IP address [{}]: '.format(default_ip)) or default_ip
@@ -20,11 +20,11 @@ def get_parameters():
     return parameters
 
 def extract_vlans_from_csv(csv_filename):
-    with open(csv_filename,'r') as vlan_file:
+    with open(csv_filename,'rb') as vlan_file:
         vlans = []
-        rows = reader(vlan_file)
+        vlan_csv = reader(vlan_file)
         first_row = True
-        for row in rows:
+        for row in vlan_csv:
             if first_row:
                 header = row
                 first_row = False
