@@ -5,7 +5,6 @@
 from getpass import getpass
 from csv import writer
 from ucsmsdk import ucshandle
-from ucsmsdk.mometa.fabric.FabricVlan import FabricVlan
 
 default_ip = '192.168.218.182'
 default_user = 'admin'
