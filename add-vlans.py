@@ -7,7 +7,7 @@ from csv import reader
 from ucsmsdk import ucshandle
 from ucsmsdk.mometa.fabric.FabricVlan import FabricVlan
 
-default_ip = '192.168.218.182'
+default_ip = '192.168.218.194'
 default_user = 'admin'
 default_filename = 'sample-vlans-in.csv'
 

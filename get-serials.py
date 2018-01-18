@@ -5,7 +5,7 @@
 from getpass import getpass
 from ucsmsdk import ucshandle
 
-default_ip = '192.168.218.182'
+default_ip = '192.168.218.194'
 default_user = 'admin'
 
 def get_parameters():

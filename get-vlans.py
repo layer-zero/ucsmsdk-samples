@@ -6,7 +6,7 @@ from getpass import getpass
 from csv import writer
 from ucsmsdk import ucshandle
 
-default_ip = '192.168.218.182'
+default_ip = '192.168.218.194'
 default_user = 'admin'
 default_filename = 'sample-vlans-out.csv'
 
