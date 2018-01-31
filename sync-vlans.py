@@ -22,7 +22,6 @@ def get_vlans(handle):
     vlan_mos = handle.query_classid(class_id='fabricVlan', filter_str=filter_string)
     return vlan_mos
 
-
 def main():
     src_ucs_params = get_parameters('Source', default_src_ip, default_username)
     dst_ucs_params = get_parameters('Destination', default_dst_ip, default_username)
@@ -34,7 +33,7 @@ def main():
     dst_vlans = get_vlans(dst_handle)
     diff_vlans = comparesyncmo.compare_ucs_mo(dst_vlans, src_vlans)
     if diff_vlans:
-        print 'Followin VLANs will be synced:\n'
+        print 'Following VLANs will be synced:\n'
         comparesyncmo.write_mo_diff(diff_vlans)
         print '\nSyncing VLANs...\n'
         comparesyncmo.sync_ucs_mo(dst_handle, diff_vlans, delete_not_present=True)
